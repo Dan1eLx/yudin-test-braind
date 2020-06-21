@@ -1,0 +1,157 @@
+.review {
+
+    @include lg-block {
+        border: none;
+        padding: 1.2rem 0 4.2rem;
+        border-bottom: 0.1rem solid $color-light-gray;
+        
+        &:not(:last-child) {
+            border-bottom: 0.1rem solid $color-light-gray;
+        }
+    }
+    border: 0.1rem solid $color-light-gray;
+    padding: 2rem;
+
+    &__block {
+        display: flex;
+        flex-wrap: wrap;
+        &--additional {
+            position: relative;
+            padding-top: 2rem;
+
+            &::before {
+                @include lg-block {
+                    width: 72.37%;
+                }
+                content: "";
+                display: block;
+                position: absolute;
+                top: 1rem;
+                right: 0;
+                width: 100%;
+                height: 0.1rem;
+                background: $color-light-gray;
+            }
+        }
+    }
+
+    &__photo {
+        
+        @include lg-block {
+            flex: 0 0 8.28%;
+            max-width: 8.28%;
+            padding-left: 1.3rem;
+            padding-right: 2.25rem;
+        }
+        flex: 0 0 5.5rem;
+        width: 100%;
+        max-width: 5.5rem;
+        padding-right: 1.4rem;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__name {
+
+        @include lg-block {
+            flex: 0 0 19.35%;
+            max-width: 19.35%;
+            font-size: 1.2rem;
+            line-height: 1.6rem;
+            padding-right: 2.7rem;
+        }
+        flex: 0 0 calc(100% - 5.5rem);
+        width: 100%;
+        max-width: calc(100% - 5.5rem);
+        font-size: 1.4rem;
+        line-height: 2rem;
+    }
+
+    &__content {
+        
+        @include lg-block {
+            flex: 0 0 42.47%;
+            max-width: 42.47%;
+            margin-top: 0;
+            padding-right: 2.7rem;
+        }
+        width: 100%;
+        margin-top: 1.4rem;
+        font-size: 1.2rem;
+        line-height: 2rem;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    &__status {
+        
+        @include lg-block {
+            display: block;
+            flex: 0 0 13.9%;
+            order: 4;
+            max-width: 13.9%;
+            padding-right: 2rem;
+        }
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+
+        &-plate {
+
+            @include lg-block {
+                margin-bottom: 0.5rem;
+            }
+            display: inline-block;
+            order: 2;
+            padding: 0.4rem 0.8rem;
+            border-radius: 0.2rem;
+            font-size: 1rem;
+            line-height: 1.4rem;
+            text-transform: uppercase;
+            color: #fff;
+            margin-bottom: 0.7rem;
+
+            &--published {
+                background: $color-green;
+            }
+
+            &--unpublished {
+                background: $color-dark-gray;
+            }
+
+            &--moderation {
+                background: $color-light-green;
+            }
+        }
+    }
+       
+    &__action {
+        
+        @include lg-block {
+            flex: 0 0 16%;
+            order: 4;
+            max-width: 16%;
+        }
+        width: 100%;
+        
+        &-btn {
+            @include lg-block {
+                width: 100%;
+            }
+        }
+    }
+
+    &__text-more {
+        margin: 0.6rem 0;
+    }
+    
+    &:not(:last-child) {
+        border-bottom: none;
+    }
+}

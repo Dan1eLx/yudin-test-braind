@@ -1,0 +1,61 @@
+.review-text-more {
+
+    &__btn {
+
+        @include lg-block {
+            font-size: 1.1rem;
+            line-height: 2rem;
+        }
+        display: none;
+        position: relative;
+        border: none;
+        padding: 0;
+        margin-top: 0.7rem;
+        background: none;
+        outline: none;
+        cursor: pointer;
+        font-size: 1.4rem;
+        line-height: 2.2rem;
+        color: $color-orange;
+        padding-right: 1.5rem;
+        appearance: none;
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: calc(50% - 0.4rem);
+            right: 0;
+            width: 0.6rem;
+            height: 0.6rem;
+            transform: rotate(-45deg);
+            border-bottom: 0.15rem solid $color-orange;
+            border-left: 0.15rem solid $color-orange;
+        }
+    }
+    $this: &;
+
+    p {
+        font-size: 1.2rem;
+        line-height: 2rem;
+        letter-spacing: 0.025rem;
+        display: block;
+        display: -webkit-box;
+    }
+
+    &.is-close {
+        p {
+            max-height: 7.5rem;
+            overflow: hidden;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            -moz-box-orient: vertical;
+            box-orient: vertical;
+            text-overflow: ellipsis;
+        }
+
+        #{$this}__btn {
+            display: inline-block;
+        }
+    }
+}

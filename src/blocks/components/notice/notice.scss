@@ -1,0 +1,32 @@
+.notice {
+    
+    @include md-block() {
+        padding: 3rem 4.9rem;
+    }
+    display: flex;
+    padding: 3rem;
+    background: $color-light-gray;
+    margin-bottom: 2.3rem;
+
+    &__exclamation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 1.5rem;
+        min-width: 1.5rem;
+        height: 1.5rem;
+        background: $color-orange;
+        margin-top: 0.5rem;
+        margin-right: 1.1rem;
+        font-size: 0.9rem;
+        color: #fff;
+        border-radius: 50%;
+    }
+
+    &__text {
+        display: inline-block;
+        font-size: 1.5rem;
+        line-height: 2.4rem;
+        opacity: 0.8;
+    }
+}

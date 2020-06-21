@@ -1,0 +1,16 @@
+.btn{
+    padding: 1rem;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    border: 0.1rem solid;
+    border-radius: 0.2rem;
+    background: transparent;
+    outline: none;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    appearance: none;
+
+    &:hover {
+        background: $color-light-gray;
+    }
+}

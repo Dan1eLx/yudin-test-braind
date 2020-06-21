@@ -1,0 +1,20 @@
+.review-photos {
+    &__item {
+        display: inline-flex;
+        align-items: center;
+        width: 7rem;
+        height: 7rem;
+        border: 0.1rem solid $color-light-gray;
+        margin-right: 0.8rem;
+        margin-bottom: 0.8rem;
+        transition: border-color 0.3s;
+
+        img {
+            width: 100%;
+        }
+
+        &:hover {
+            border-color: $color-orange;
+        }
+    }
+}

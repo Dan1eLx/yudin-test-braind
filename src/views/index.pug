@@ -1,0 +1,25 @@
+extends layouts/default
+include helpers/mixins
+include ../blocks/components/notice/notice
+include ../blocks/components/review/review
+include ../blocks/components/review-photos/review-photos
+include ../blocks/components/review-rating/review-rating
+include ../blocks/components/review-text-more/review-text-more
+include ../blocks/components/reviews-list/reviews-list
+
+block variables
+	- const title = "yudin-test-braind"
+
+block content
+	section.content
+		.container
+			h1.title Мои отзывы о товарах
+			+notice
+				| Ваши отзывы будут опубликованы на сайте после проверки модератором.
+			+reviews-list
+				+review(status='published' additional=true)
+				+review
+
+block scripts
+	script(src="js/main.js")
+	script(src="js/vendor.js")

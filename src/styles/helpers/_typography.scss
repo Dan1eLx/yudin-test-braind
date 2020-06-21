@@ -1,0 +1,17 @@
+.title {
+    font-size: 2rem;
+    line-height: 2.7rem;
+    margin-bottom: 1.4rem;
+    
+    @include sm-block() {
+        margin-bottom: 2.3rem;
+    }
+}
+
+.is-gray {
+    color: $color-gray;
+}
+
+.is-orange {
+    color: $color-orange;
+}

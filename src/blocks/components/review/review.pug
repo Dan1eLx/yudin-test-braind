@@ -1,0 +1,58 @@
+mixin review
+    .review(class = attributes.class)
+        .review__block
+            if attributes.status == 'published'
+                .review__status
+                    .review__status-plate.review__status-plate--published 
+                        | Опубликован
+                    .is-gray 1 августа, 2018
+                        
+                .review__photo
+                    img(src= "img/review.jpg", alt='Дрель ударная BOSCH PSB 550 RЕ, БЗП Арт.0603130020')
+                
+                .review__name
+                    | Дрель ударная BOSCH PSB 550 RЕ, БЗП Арт.0603130020
+
+                .review__content
+                    +review-rating
+                    +review-text-more.review__text-more
+                        | Значит купил я данную модель, поработал неделю, отказал один аккумулятор, заряд держит так себе, НОООООО МАГАЗИН АДЕКВАТНЫЙ, ОБМЕНЯЛИ НА НОВЫЙ, ПРИЧЁМ ПРИВЕЗЛИ ДОМОЙ. С ТАКИМ ПРОДАВЦОМ ПРИЯТНО ИМЕТЬ ДЕЛО!!! СОВЕТУЮ! Я МНОГО ВСЕГО ПОКУПАЛ, И БУДУ ПОКУПАТЬ)
+
+                .review__action
+                    button.btn.is-gray.review__action-btn Дополнить отзыв
+
+            else
+                .review__status
+                    .review__status-plate.review__status-plate--unpublished 
+                        | Не опубликован
+                    .is-gray 23 июня, 2019
+
+                .review__photo
+                    img(src= "img/review2.jpg", alt='Декоративный металлический экран на радиатор 3-х секционный 3 ДМЭР')
+                
+                .review__name
+                    | Декоративный металлический экран на радиатор 3-х секционный 3 ДМЭР
+                
+                .review__content
+                    span.is-gray К сожалению, ваш отзыв не прошёл модерацию.
+                
+                .review__action
+
+        if attributes.additional
+            .review__block.review__block--additional           
+                .review__status
+                    .review__status-plate.review__status-plate--moderation 
+                        | на модерации
+                    .is-gray 19 августа, 2018
+
+                .review__photo
+                    
+                .review__name
+                    
+                .review__content
+                    p.is-orange Дополненный отзыв
+                    +review-text-more.review__text-more Год прошел, работает как пушка!
+                    +review-photos
+
+                .review__action
+            
